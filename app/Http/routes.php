@@ -15,5 +15,5 @@
 //     return view('welcome');
 // });
 get('/','StaticPagesController@home');
-get('/','StaticPagesController@help');
-get('/','StaticPagesController@about');
+get('/help','StaticPagesController@help');
+get('/about','StaticPagesController@about');
