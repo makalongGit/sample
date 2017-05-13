@@ -33,6 +33,7 @@ class UsersController extends Controller
             'password'=>bcrypt($request->password),
         ]);
 
+        Auth::login($user);
         session()->flash('success','欢迎,showtime~~~');
         return redirect()->route('users.show',[$user]);;
     }
