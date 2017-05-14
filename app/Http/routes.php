@@ -24,3 +24,5 @@ resource('users','UsersController');
 get('login','SessionsController@create')->name('login');
 post('login','SessionsController@store')->name('login');
 delete('logout','SessionsCOntroller@destroy')->name('logout');
+
+get('signip/confirm/{token}','UsersController@confirmEmail')->name('confirm_email');
