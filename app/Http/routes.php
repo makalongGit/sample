@@ -26,3 +26,8 @@ post('login','SessionsController@store')->name('login');
 delete('logout','SessionsCOntroller@destroy')->name('logout');
 
 get('signip/confirm/{token}','UsersController@confirmEmail')->name('confirm_email');
+
+get('password/email','Auth\PasswordController@getEmail')->name('password.reset');
+post('password/email','Auth\PasswordController@postEmail')->name('password.reset');
+get('password/reset/{token}','Auth\PasswordController@getReset')->name('password.edit');
+post('password/reset','Auth\PasswordController@postReset')->name('password.update');
